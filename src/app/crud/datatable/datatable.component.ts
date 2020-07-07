@@ -10,7 +10,7 @@ import { CrudService } from '../../services/crud.service';
 @Component({
   selector: 'app-datatable',
   templateUrl: './datatable.component.html',
-  styleUrls: ['./datatable.component.css']
+  styleUrls: ['./datatable.component.css'],
 })
 export class DatatableComponent implements OnInit, OnDestroy {
 
@@ -62,13 +62,14 @@ export class DatatableComponent implements OnInit, OnDestroy {
         const self = this;
         // Unbind first in order to avoid any duplicate handler
         // (see https://github.com/l-lin/angular-datatables/issues/87)
-        $('td', row).unbind('click');
-        $('td', row).find('button.edit').bind('click', () => {
+        $('td:last-child', row).find('button.edit').unbind('click');
+        $('td:last-child', row).find('button.edit').on('click', () => {
           self.modalLabel = "Edit";
           console.log("Edit button clicked");
           self.setFormData(data);
         });
-        $('td', row).find('button.delete').bind('click', () => {
+        $('td:last-child', row).find('button.delete').unbind('click');
+        $('td:last-child', row).find('button.delete').on('click', () => {
           console.log("Delete button clicked");
           self.deleteRecord(data["id"]);
         });

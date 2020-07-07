@@ -19,20 +19,11 @@ export class DataService implements InMemoryDbService {
       { id: 6, user_name: 'User 6', description: 'Sixth User', amount: 6000 },
       { id: 7, user_name: 'User 7', description: 'Seventh User', amount: 7000 },
       { id: 8, user_name: 'User 8', description: 'Eighth User', amount: 8000 },
-      { id: 4, user_name: 'User 9', description: 'Nineth User', amount: 9000 },
+      { id: 9, user_name: 'User 9', description: 'Nineth User', amount: 9000 },
       { id: 10, user_name: 'User 10', description: 'Tenth User', amount: 10000 },
     ];
 
     return { records };
-
     
-  }
-  // Overrides the genId method to ensure that a hero always has an id.
-  // If the heroes array is empty,
-  // the method below returns the initial number (11).
-  // if the heroes array is not empty, the method below returns the highest
-  // hero id + 1.
-  genId(records): number {
-    return records.length > 0 ? Math.max(...records.map(record => record.id)) + 1 : 1;
   }
 }
