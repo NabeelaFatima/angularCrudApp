@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent{
+<<<<<<< HEAD
   
+=======
+>>>>>>> 1c0fc0f0fde925139007733581c7b9565be24775
   title = 'AngularCRUD-App';
 
   options = {

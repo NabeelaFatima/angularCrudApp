@@ -11,6 +11,7 @@ export class DataService implements InMemoryDbService {
   createDb() {
 
     let records = [
+<<<<<<< HEAD
       { id: 1, user_name: 'User 1', description: 'First User', amount: 1000 },
       { id: 2, user_name: 'User 2', description: 'Second User', amount: 2000 },
       { id: 3, user_name: 'User 3', description: 'Third User', amount: 3000 },
@@ -25,5 +26,15 @@ export class DataService implements InMemoryDbService {
 
     return { records };
     
+=======
+      { id: 1, user_name: 'User 1', description: 'First User.', amount: 1000 },
+      { id: 2, user_name: 'User 2', description: 'Second User.', amount: 2000 },
+      { id: 3, user_name: 'User 3', description: 'Third User.', amount: 3000 },
+      { id: 4, user_name: 'User 4', description: 'Fourth User.', amount: 4000 }
+    ];
+
+    return { records };
+
+>>>>>>> 1c0fc0f0fde925139007733581c7b9565be24775
   }
 }
