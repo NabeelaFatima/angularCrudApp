@@ -97,7 +97,7 @@ export class DatatableComponent implements OnInit, OnDestroy {
       this.dtOptions.columns = this.columns;
       this.dtOptions.columns.push({
         title: "Actions",
-        data: "",
+        data: null,
         render: function (data: any, type: any, row: any) {
           return `<div class="d-flex justify-content-around"> 
                 <button type="button" class="btn btn-primary edit mr-1" 
